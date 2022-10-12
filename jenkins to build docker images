@@ -1,26 +1,14 @@
 // SCRIPTED
 //DECARATIVE
 pipeline {
-    // agent any
-    agent{
-      docker { image 'node:16.13.1-alpine' }
-      }
-stages {
-	  stage('Build') {
-	 steps {
-        sh 'node --version'	
-        echo "Build"
-	 }
+    agent {
+        docker { image 'node:16.13.1-alpine' }
     }
-	 stage('Test') {
-		steps {
-            echo "Test"
-	} 
-      }
-      stage('Integration Test') {
-		steps {
-            echo "integration Test"
-	 }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
         }
- }
+    }
 }
