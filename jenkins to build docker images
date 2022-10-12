@@ -2,12 +2,13 @@
 //DECARATIVE
 pipeline {
     agent {
-        docker { image 'node:16.13.1-alpine' }
+       docker {
+        image 'Apache Maven 3.6.3'}
     }
     stages {
         stage('Test') {
             steps {
-                sh 'node --version'
+                sh 'mvn--version'
             }
         }
     }
