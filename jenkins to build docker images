@@ -1,9 +1,7 @@
 // SCRIPTED
 //DECARATIVE
 pipeline {
-    agent {
-       docker {
-        image 'Apache Maven 3.6.3'}
+    agent { docker{ image 'Apache Maven:3.6.3'}
     }
     stages {
         stage('Test') {
